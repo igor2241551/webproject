@@ -1,7 +1,11 @@
 body{
     font-family: 'Century Gothic', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } 
- 
+
+h1{
+    font-size: 70px;
+}
+
 nav #navbarNav lu li a {
     color: #1558B7; 
     background: #fff; 
@@ -12,10 +16,9 @@ nav li:last-child {
     color: #1558B7;
     background: #fff;
     border: 1px solid #1558B7;
-    margin-right: 40px;
 }
 
-#btcontactos a:houver{
+#btcontactos:hover{
     background-color: #1558B7;
     color: #fff;
 }
@@ -53,10 +56,7 @@ nav li:last-child {
     max-height: 100%;  
 } 
 
-#tituloSlide1{
-    font-size: 4vw;
-    
-}
+
 
 #carrocel2 {
     background: #EDEDED;
@@ -68,9 +68,9 @@ nav li:last-child {
 } */
 
 
-.carousel-inner { 
+/* .carousel-inner { 
     height: 75vh; 
 } 
 .carousel-item img { 
     height: 100%; object-fit: cover; 
-}  
+}   */
