@@ -1,7 +1,11 @@
 body{
     font-family: 'Century Gothic', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 } 
- 
+
+h1{
+    font-size: 70px;
+}
+
 nav #navbarNav lu li a {
     color: #1558B7; 
     background: #fff; 
@@ -52,9 +56,7 @@ nav li:last-child {
     max-height: 100%;  
 } 
 
-h1{
-    font-size: 70px;
-}
+
 
 #carrocel2 {
     background: #EDEDED;
