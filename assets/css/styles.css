@@ -14,7 +14,7 @@ nav li:last-child {
     border: 1px solid #1558B7;
 }
 
-#btcontactos a:hover{
+#btcontactos:hover{
     background-color: #1558B7;
     color: #fff;
 }
@@ -52,9 +52,8 @@ nav li:last-child {
     max-height: 100%;  
 } 
 
-#tituloSlide1{
-    font-size: 4vw;
-    
+h1{
+    font-size: 70px;
 }
 
 #carrocel2 {
@@ -67,9 +66,9 @@ nav li:last-child {
 } */
 
 
-.carousel-inner { 
+/* .carousel-inner { 
     height: 75vh; 
 } 
 .carousel-item img { 
     height: 100%; object-fit: cover; 
-}  
+}   */
