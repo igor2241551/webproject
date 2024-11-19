@@ -13,197 +13,395 @@
   </head>
 
   <body>
-    <!-- nav bar menu principal-->
-    <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container position-relative">
-        <div position-absolute start-0>
+      <!-- <div class="container"> -->
+        <!-- nav bar menu principal-->
+        <nav class="navbar navbar-expand-lg bg-white">
+          <div class="container position-relative">
+            <div position-absolute start-0>
+              <a href="#">
+                <img
+                  src="assets/img/logo.png"
+                  alt="Instituto Politecnico de Leiria"
+              /></a>
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" >
+              <ul id="navbarNav" class="navbar-nav position-absolute end-0 fw-bold">
+                <li class="nav-item px-4">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="#">Países</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="#">Loja</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="#">Sobre</a>
+                </li>
+                <li class="nav-item px-3" >
+                  <a id="btcontactos" class="nav-link px-3" href="#">Contactos</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!--                                                   final nav bar menu principal-->
+
+        <!--                                                           carrocel -->
+        <div id="carrocel" class="carousel slide bg-success">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carrocel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carrocel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+
+          <div class="carousel-inner d-flex align-items-center">
+            <div class="carousel-item active h-100 d-flex align-items-center" id="carrocel1">
+              <div class="container">
+                <div class="row flex-direction-column align-items-center">
+                  <div class="col-md-7 text-white text-left">
+                    <div class="d-flex flex-column">
+                      <p><h1 class="fw-bold text-start" id="tituloSlide1">
+                        Descobre a Austrália
+                      </h1></p>
+                      <p>
+                        Descobre a vibrante Grande Barreira de Coral, a famosa Ópera
+                        de Sydney e o vasto Outback.
+                      </p>
+                      <p>
+                        A Austrália oferece uma visa selvagem única, costas
+                        ensolaradas e paisagens diversificadas.
+                      </p>
+                    </div>
+                    <div class="mt-5">
+                      <button type="button" id="btnslide1" class="btn btn-primary btn-lg px-5">Explorar</button>
+                    </div>
+                  </div>
+                  <div class="imagem-slide col-md-5 text-left">
+                    <img
+                      src="assets/img/sydney.png"
+                      class="d-block ratio ratio-1x1 object-fit-lg-contain mx-auto"
+                      alt="..."/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="carousel-item h-100" id="carrocel2">
+              <div class="container h-100 d-flex align-items-center">
+                <div class="row flex-direction-column align-items-center">
+                  <div class="col-md-7 text-bla text-left">
+                    <div class="d-flex flex-column">
+                      <p><h1 class="fw-bold text-start" id="tituloSlide2">
+                        Descobre o Japão
+                      </h1></p>
+                      <p>
+                        Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova
+                        Iorque às antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.
+                      </p>
+                      <p>
+                        Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.
+                      </p>
+                    </div>
+                    <div class="mt-5">
+                      <button type="button" id="btnslide2" class="btn btn-primary btn-lg px-5">Explorar</button>
+                    </div>
+                  </div>
+                  <div class="imagem-slide col-md-5 text-left">
+                    <img
+                      src="assets/img/w8v1we1v.png"
+                      class="d-block ratio ratio-1x1 object-fit-lg-contain mx-auto"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carrocel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carrocel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- ******************************************************final do carrocel -->
+
+
+        
+        <!-- ******************************************************inicio cardes paises -->
+        <section class="container my-5">
+          <div>
+            <div class="py-5 flex-direction-column align-items-center text-center"> 
+              <span> <h1>Escolha o País</h1><br></span>
+              <span>Escolha um destino para explorar a sua singularidade, cultura e atrações. Descubra os lugares <br> 
+              mais cativantes do mundo, cada um oferecendo experiências inesquecíveis.</span>
+            </div>
+
+
+            <div class="row">
+              <div class="col-md-4 ">
+                <div class="card rounded-0 border-2">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    class="card-img-top p-4"
+                    alt="Imagem Card 1"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Card 1</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="card rounded-0 border-2">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    class="card-img-top p-4"
+                    alt="Imagem Card 2"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Card 2</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card rounded-0 border-2">
+                  <img
+                    src="https://via.placeholder.com/300x200"
+                    class="card-img-top p-4"
+                    alt="Imagem Card 3"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Card 3</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="container-fluid" id="explorarmundo">
+          <div class="d-flex flex-column">
+            <p><h1 class="fw-bold text-center text-white" id="tituloExplora">
+              Explora o mundo connosco
+            </h1></p>
+            <span class="text-white text-center">
+              <br>Embarca numa aventura para descobrir os destinos mais cativantes do mundo, desde paisagens urbanas vibrantes até serenas
+              <br>maravilhas naturais. Explora o encanto único de cada país, rico em cultura, história e experiências inesquecíveis. Deixa-nos ser o
+              <br>teu guia até lugares que inspiram e despertam o espírito de exploração. Em cada viagem, descobre novas perspetivas e tesouros
+              <br>escondidos à espera de serem revelados. Começa a tua aventura hoje e cria memórias que durarão para toda a vida.
+            </span>
+
+            <!-- falta formatar o butão -->
+            <div class="mt-5 text-center">
+              <button type="button" id="btnexplora" class="btn btn-primary btn-lg px-5">Explorar</button>
+            </div>
+          </div>
+        </section>
+        
+
+        <!--                                            secção dos contacto -->
+
+        <section class="container my-5">
+          <div class="row">
+            <div class="col-md-4 ">
+              <div class="border border-2 m-1">
+                <div>
+                  <img src="https://via.placeholder.com/200x200" class="card-img-top p-4" alt="">
+                </div>
+                <div>
+                  <h4 class="card-title text-center fw-bold">João Lopes</h4>
+                </div>
+                <div class="text-center py-1">
+                  <span class="card-text ">Estudante</span>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary btn-lg px-2 btnazul m-4">Mais Informações ></button>
+                </div>
+              </div>
+            </div>
+          
+
+          
+            <div class="col-md-4">
+              <div class="border border-2 m-1">
+                <div>
+                  <img src="https://via.placeholder.com/200x200" class="card-img-top p-4" alt="">
+                </div>
+                <div>
+                  <h4 class="card-title text-center fw-bold">João Lopes</h4>
+                </div>
+                <div class="text-center py-1">
+                  <span class="card-text ">Estudante</span>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary btn-lg px-2 btnazul m-4">Mais Informações ></button>
+                </div>
+              </div>
+            </div>
+          
+
+          
+            <div class="col-md-4">
+              <div class="border border-2 m-1">
+                <div>
+                  <img src="https://via.placeholder.com/200x200" class="card-img-top p-4" alt="">
+                </div>
+                <div>
+                  <h4 class="card-title text-center fw-bold">João Lopes</h4>
+                </div>
+                <div class="text-center py-1">
+                  <span class="card-text ">Estudante</span>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-primary btn-lg px-2 btnazul m-4">Mais Informações ></button>
+                </div>
+              </div>                                                                                                                                      
+          </div>
+
+        </section>
+
+        <!-- ************************************teste de API********************************** -->
+
+        <!-- <div class="container mt-5">
+          <h1 class="text-center">Informação de Países</h1>
+          <div id="countries-container" class="row"></div>
+        </div>
+
+        <script>
+          async function fetchCountries() {
+              try {
+                  const response = await fetch('https://restcountries.com/v3.1/all');
+                  const countries = await response.json();
+                  const randomCountries = getRandomCountries(countries, 3);
+                  displayCountries(randomCountries);
+              } catch (error) {
+                  console.error('Erro ao buscar dados:', error);
+              }
+          }
+      
+          function getRandomCountries(countries, count) {
+              const shuffled = countries.sort(() => 0.5 - Math.random());
+              return shuffled.slice(0, count);
+          }
+      
+          function displayCountries(countries) {
+              const container = document.getElementById('countries-container');
+              container.innerHTML = ''; // Limpa o contêiner antes de adicionar novos itens
+              countries.forEach(country => {
+                  const countryCard = `
+                      <div class="col-md-4 mb-4">
+                          <div class="card">
+                              <img src="${country.flags.svg}" class="card-img-top" alt="Bandeira de ${country.name.common}">
+                              <div class="card-body">
+                                  <h5 class="card-title">${country.name.common}</h5>
+                                  <p class="card-text">Capital: ${country.capital ? country.capital[0] : 'N/A'}</p>
+                                  <p class="card-text">Região: ${country.region}</p>
+                                  <p class="card-text">População: ${country.population.toLocaleString()}</p>
+                              </div>
+                          </div>
+                      </div>
+                  `;
+                  container.innerHTML += countryCard;
+              });
+          }
+      
+          fetchCountries();
+      </script> -->
+
+
+          <!--                                                                footer -->
+      <footer>
+        <div class="text-center pt-4">
           <a href="#">
             <img
-              src="assets/img/logo.jpg"
+              src="assets/img/logo.png"
               alt="Instituto Politecnico de Leiria"
           /></a>
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav position-absolute end-0 fw-bold">
-            <li class="nav-item px-4">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="#">Países</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="#">Loja</a>
-            </li>
-            <li class="nav-item px-3">
-              <a class="nav-link" href="#">Sobre</a>
-            </li>
-            <li class="nav-item border border-primary px-4" id="btcontactos">
-              <a class="nav-link" href="#">Contactos</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- final nav bar menu principal-->
-
-    <!-- carrocel -->
-    <div id="carrocel" class="carousel slide bg-success">
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carrocel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carrocel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-      </div>
-      <div class="carousel-inner d-flex align-items-center">
-        <div
-          class="carousel-item active h-100 d-flex align-items-center"
-          id="carrocel1"
-        >
-          <div class="container">
-            <div class="row flex-direction-column align-items-center">
-              <div class="col-md-7 text-white text-left">
-                <div class="d-flex flex-column">
-                  <p><h1 class="fw-bold text-start" id="tituloSlide1">
-                    Descobre a Austrália
-                  </h1></p>
-                  <p>
-                    Descobre a vibrante Grande Barreira de Coral, a famosa Ópera
-                    de Sydney e o vasto Outback.
-                  </p>
-                  <p>
-                    A Austrália oferece uma visa selvagem única, costas
-                    ensolaradas e paisagens diversificadas.
-                  </p>
-                </div>
-              </div>
-              <div class="imagem-slide col-md-5 text-left">
-                <img
-                  src="assets/img/sydney.png"
-                  class="d-block ratio ratio-1x1 object-fit-lg-contain mx-auto"
-                  alt="..."
-                />
+        <div class="py-3">
+          <!-- menu do footer -->
+          <nav class="navbar navbar-expand-lg d-flex">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse justify-content-center" >
+                <ul id="navbarNav" class="navbar-nav fw-bold">
+                  <li class="nav-item px-4">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Países</a>
+                  </li>
+                  <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Loja</a>
+                  </li>
+                  <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Sobre</a>
+                  </li>
+                  <li class="nav-item px-3" >
+                    <a class="nav-link px-3" href="#">Contactos</a>
+                  </li>
+                </ul>
               </div>
             </div>
-          </div>
+          </nav>
         </div>
-        <div class="carousel-item h-100" id="carrocel2">
-          <div class="row">
-            <div class="col-7 text- text-left ps-50">
-              <p class="fw-bold">Descobre o Japão</p>
-              <p>
-                Descobre a vibrante Grande Barreira de Coral, a famosa Ópera de
-                Sydney e o vasto Outback.
-              </p>
-              <p>
-                A Austrália oferece uma visa selvagem única, costas ensolaradas
-                e paisagens diversificadas.
-              </p>
-            </div>
-            <div class="imagem-slide col-5 text-left">
-              <img
-                src="assets/img/sydney.png"
-                class="d-block object-fit-lg-contain"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carrocel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carrocel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-    <!-- ******************************************************final do carrocel -->
-
-
-    
-    <!-- ******************************************************inicio cardes paises -->
-    <section>
-      <div class="container mt-5">
         <div>
-          <span>Escolha o País</span>
+          <!-- link das redes sociais -->
+
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200"
-                class="card-img-top"
-                alt="Imagem Card 1"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card 1</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200"
-                class="card-img-top"
-                alt="Imagem Card 2"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card 2</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://via.placeholder.com/300x200"
-                class="card-img-top"
-                alt="Imagem Card 3"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card 3</h5>
-              </div>
-            </div>
-          </div>
+
+        <div class="text-center border-top border-2 py-3">
+          <!-- rodape de direitos de autor -->
+          <span>© 2024 Direitos de Autor, Todos os direitos reservados</span>
         </div>
-      </div>
-    </section>
+
+      </footer>
+
+    <!-- </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+

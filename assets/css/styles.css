@@ -4,23 +4,40 @@ body{
 
 h1{
     font-size: 70px;
+    font-weight: bold;
 }
 
-nav #navbarNav lu li a {
+#navbarNav{
     color: #1558B7; 
     background: #fff; 
     
 }
-
-nav li:last-child {
+#navbarNav :hover{
     color: #1558B7;
-    background: #fff;
-    border: 1px solid #1558B7;
 }
 
-#btcontactos:hover{
-    background-color: #1558B7;
-    color: #fff;
+#btcontactos {
+    color: #1558B7;
+    background: #fff;
+    border: 2px solid #1558B7;
+    
+}
+
+#btcontactos:hover { 
+    background: #1558B7;
+    color: #ffffff;
+}
+
+.btnazul {
+    color: #1558B7;
+    background: #fff;
+    border: 2px solid #1558B7;
+    border-radius: 0%;
+}
+
+.btnazul:hover { 
+    background: #1558B7;
+    color: #ffffff;
 }
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -36,13 +53,6 @@ nav li:last-child {
     background: #000;
 }
 
-.imagem-slide { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    height: 300px; /* Defina a altura conforme necessário */ 
-    border: 1px solid #ddd; /* Apenas para visualização */ 
-} 
 .imagem-slide img { 
     max-width: 100%; 
     max-height: 100%; 
@@ -56,21 +66,70 @@ nav li:last-child {
     max-height: 100%;  
 } 
 
-
-
 #carrocel2 {
     background: #EDEDED;
 }
 
-/* #btcontactos:houver{ 
-    color: #fff;
+#btnslide1{
+    border-radius: 0%;
+    border: 2px solid #fff;
+    background: #000;
+}
+
+#btnslide1:hover{
+    border-radius: 0%;
+    border: 2px solid #fff;
+    color: #000;
+    background: #fff;
+}
+
+#btnslide2{
+    border-radius: 0%;
+    border: 2px solid #1558B7;
+    background: #EDEDED;
+    color: #1558B7;
+}
+
+#btnslide2:hover{
+    border-radius: 0%;
+    border: 2px solid #1558B7;
     background: #1558B7;
-} */
+    color: #fff;
+}
+
+/* *********************************************final do slide********************************* */
+
+/* ******************************************************cards********************************** */
+
+.card:hover{
+    border-color: #1558B7;
+}
+
+/* ********************************************final dos cards*********************************** */
 
 
-/* .carousel-inner { 
-    height: 75vh; 
-} 
-.carousel-item img { 
-    height: 100%; object-fit: cover; 
-}   */
+/* ******************************************************css do footer************************ */
+footer{
+    background: #F3F3F3;
+}
+footer nav li{
+    background: #F3F3F3;
+}
+
+#imagemfundo{
+    width: 100%;
+    height: auto;
+}   
+
+
+/* *************************************************** secção EXPLORA MUNDO **************************** */
+#explorarmundo{
+    background-image: url('../img/cidadenoite.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    display: flex; align-items: center; 
+}
