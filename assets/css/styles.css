@@ -133,3 +133,40 @@ footer nav li{
     height: 600px;
     display: flex; align-items: center; 
 }
+
+
+
+
+
+/* *************************************************** Contactos  **************************** */
+#TextoAboutContacto {
+    background-image: url('/assets/img/imagem_contactos.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    max-width: 40%;
+}
+
+#contactoDivider {
+    height: 50vh;
+}
+
+/* Mobile media querye */
+@media (max-width: 1092px) {
+    #TextoAboutContacto {
+        /* background-image: none; */
+        font-size: small;
+        max-width: 100%;
+    }
+
+    #TextoAboutContactoHeading {
+        font-size: 40px;
+    }
+
+    #contactoDivider {
+        display: none;
+    }
+}
