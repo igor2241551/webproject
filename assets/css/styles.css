@@ -181,20 +181,57 @@ footer nav li{
 
 
 /* *************************************************** Sobre **************************** */
-    #textoHeader {
-        word-wrap: break-word;
-        text-align: center;
-    }
+#textoHeader {
+    word-wrap: break-word;
+    text-align: center;
+}
 
-    #titulo {
-        font-weight: bold;
-    }
+#titulo {
+    font-weight: bold;
+}
 
-    #subtitulo {
-        max-width: 60%;
-    }
+#subtitulo {
+    max-width: 60%;
+}
 
-    #descricaoHeader {
-        max-width: 70%;
-    }
+#descricaoHeader {
+    max-width: 70%;
+}
+
+#texto h2 {
+    font-weight: bold;
+    font-size: 55px;
+}
+
+#texto {
+    font-size: 30px;
+    background-color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 5px;
+}
+
+#imagemProjeto img {
+    background-color: #000;
+    opacity: 0.80;
+    width: 100vw; /* Full width of the viewport */
+}
+
+.full-page-image {
+    max-height: calc(100vh - 50px);
+    min-height: calc(100vh - 150px);
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
+}
+
+#historiaProjeto .position-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
 /* *************************************************** Sobre **************************** */
