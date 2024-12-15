@@ -42,11 +42,22 @@ h1{
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
+.carousel-control-prev{
+    width: 5%;
+}
+.carousel-control-next{
+    width: 5%;
+}
+
+
 .carousel-inner { 
     height: 80vh; 
     max-height: 80vh;
 }
 
+.iconCarrocel{
+    color: #1559B7;
+}
 
 
 #carrocel1 {
@@ -97,7 +108,16 @@ h1{
     color: #fff;
 }
 
+
+
 /* *********************************************final do slide********************************* */
+
+
+
+
+
+
+
 
 /* ******************************************************cards********************************** */
 
@@ -105,6 +125,20 @@ h1{
     border-color: #1558B7;
 }
 
+.cardPais{
+    width: 335px;
+    height: 313px;
+}
+
+.cardPais .imagemCard{    /* isto não esta bem a imagem fica com tamanhos descontrolados*/
+    max-width: 100%;
+    max-height: 100%;
+    /* width: 288px;
+    height: 199.17px; */
+    object-fit: contain; 
+    object-position: center;
+
+}
 /* ********************************************final dos cards*********************************** */
 
 
@@ -121,10 +155,32 @@ footer nav li{
     height: auto;
 }   
 
+.listaRS{
+    list-style-type: none; 
+    padding: 10px; 
+    /* margin: 10px;  */
+    display: flex; 
+
+}
+
+#btnexplora{
+    color: #000;
+    background: #fff;
+    border-radius: 0%;
+    border: 1px solid #fff;
+}
+
+#btnexplora:hover{
+    color: #fff;
+    background-color: transparent;
+    border-radius: 0%;
+    border: 1px solid #fff;
+}
+
 
 /* *************************************************** secção EXPLORA MUNDO **************************** */
 #explorarmundo{
-    background-image: url('../img/cidadenoite.jpg');
+    background-image: url('../img/cidade2.jpg');
     background-size: cover;
     background-position: center;
     display: flex; 
@@ -136,7 +192,27 @@ footer nav li{
 
 
 
+/* *******************************************secção contactos da homepage************************************ */
 
+.cardContactos{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+
+.cardContactos:hover{
+    box-shadow:  0px 4px 34px 0px rgba(0,0,0,0.15);
+    border: 0px solid #000;
+    
+}
+
+.cardContactos:hover .btContactos{
+    background: #1558B7;
+    color: #ffffff;
+    
+}
+
+
+/* ******************************************************************************************************** */
 
 /* *************************************************** Contactos  **************************** */
 #TextoAboutContacto {
