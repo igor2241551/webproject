@@ -221,7 +221,7 @@ footer nav li{
     color: white;
     text-align: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Opacidade do fundo 0.5 para dar para ler melhor */
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px; /* Arredonda os cantos da caixa */
 }
 
@@ -231,9 +231,26 @@ footer nav li{
 
 /* *************************************************** DETALHES PAÍS **************************** */
 
-#bandeiraPais img{
-    max-width: 200px;
-    max-height: 200px;
+#bandeira{
+    max-width: 320px;
+    max-height: 320px;
+    background-color: rgba(17, 5, 5, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    display: block;
+    max-width: 100%; /*Responsividade*/
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Sombra suave para destacar */
+}
+
+.form-label {
+   font-size: 0.8rem;
+}
+
+#header_paises {
+    max-width: 600px; /* Largura máxima para o container */
+    margin: auto;
+    padding: 20px;
+    text-align: center;
 }
 
 /* *************************************************** DETALHES PAÍS **************************** */
