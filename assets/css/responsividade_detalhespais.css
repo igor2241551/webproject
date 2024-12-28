@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+    .col-12 {
+        width: 100%;    /* As colunas ampliam em telas menores */
+    }
+
+    .mb-4 {
+        margin-bottom: 1.5rem; /* Aumenta o espaçamento entre as seções */
+    }
+}
+
+@media (max-width: 576px) {
+    .form-control {
+        font-size: 0.9rem; /* Ajusta a fonte */
+    }
+    .bg-light {
+        padding: 1.5rem; /* Ajusta o padding */
+    }
+}

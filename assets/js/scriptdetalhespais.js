@@ -13,26 +13,37 @@ document.addEventListener("DOMContentLoaded", function () {
         success: function (data) {
             const pais = data[0]; // A API retorna um array com os dados do país pedido (array com objetos dentro)
     
-            //Campo do formulário
-            document.getElementById("nome").innerText = pais.name?.common || "N/A";
-            document.getElementById("capital").value = pais.capital?.[0] || "N/A";
-            document.getElementById("moeda").value = pais.currencies ? Object.values(pais.currencies).map((currency) => currency.name).join(", ") : "N/A";
-            document.getElementById("continente").value = pais.region || "N/A";
-            document.getElementById("populacao").value = pais.population ? pais.population.toLocaleString() : "N/A";
-            document.getElementById("linguas").value = pais.languages ? Object.values(pais.languages).join(", ") : "N/A";
-            document.getElementById("bandeira").src = pais.flags?.svg || "";
+        // Atualizar título e imagem
+        document.getElementById("nome").innerText = pais.name?.common || "N/A";
+        document.getElementById("bandeira").src = pais.flags?.svg || "";
+
+        // Preenche os campos do formulário
+        document.getElementById("capital").value = pais.capital || "N/A";
+        document.getElementById("moeda").value = pais.currencies
+            ? Object.values(pais.currencies).map((currency) => currency.name).join(", ")
+            : "N/A";
+        document.getElementById("continente").value = pais.region || "N/A";
+        document.getElementById("linguas").value = pais.languages
+            ? Object.values(pais.languages).join(", ")
+            : "N/A";
+
+        // Preenche as informações adicionais
+        document.getElementById("area").innerHTML = `<strong>Área:</strong> ${pais.area ? pais.area.toLocaleString() + " km²" : "N/A"}`;
+        document.getElementById("subregiao").innerHTML = `<strong>Sub-região:</strong> ${pais.subregion || "N/A"}`;
+        document.getElementById("uniaoeuropeia").innerHTML = `<strong>Membro da ONU:</strong> ${pais.unMember ? "Sim" : "Não"}`;
+        document.getElementById("populacao-urbana").innerHTML = `<strong>População:</strong> ${pais.population ? pais.population.toLocaleString() : "N/A"}`;
+
+        // Atualiza o link para o Google Maps
+        const mapaLink = pais.maps ? pais.maps.googleMaps : "#"; // O link existe, se sim, ir buscar. Se não, #
+        const botaoMapa = document.getElementById("linkMapa"); // Seleciona o link dentro do botão
+        botaoMapa.href = mapaLink; // Atualiza o href do link
+
+    },
     
-            // CAMPO DAS INFORMAÇÕES ADICIONAIS
-            document.getElementById("area").innerHTML = `<strong>Área:</strong> ${pais.area ? pais.area.toLocaleString() + " km²" : "N/A"}`;
-            document.getElementById("subregiao").innerHTML = `<strong>Sub-região:</strong> ${pais.subregion || "N/A"}`;
-            const membroONU = pais.unMember ? "Sim" : "Não";
-            document.getElementById("uniaoeuropeia").innerHTML = `<strong>Membro da ONU:</strong> ${membroONU}`;
-            document.getElementById("populacao-urbana").innerHTML = `<strong>População:</strong> ${pais.population ? pais.population.toLocaleString() : "N/A"}`
-        },
-        error: function (error) {
-            console.error("Erro ao pedir dados à API:", error);
-            alert("Não foi possível obter os dados do país. Por favor, tente novamente mais tarde.");
-        }
+    error: function (error) {
+        console.error("Erro ao pedir dados à API:", error);
+        alert("Não foi possível obter os dados do país. Por favor, tente novamente mais tarde.");
+    }
     });
 });
 

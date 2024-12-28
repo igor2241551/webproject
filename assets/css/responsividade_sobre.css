@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+    #subtitulo h1 {
+        font-size: 2rem;
+    }
+
+    #textoHeader p {
+        font-size: 1rem; 
+    }
+
+    #historiaProjeto .position-absolute {
+        width: 95%; /* Ajusta a largura do texto*/
+    }
+
+    .full-page-image {
+        max-height: 50vh; /* Menos altura para a imagem em telas menores */
+    }
+}
+
+@media (max-width: 576px) {
+    #textoHeader h1 {
+        font-size: 1.5rem; 
+    }
+
+    #textoHeader p {
+        font-size: 0.9rem; 
+    }
+
+    #historiaProjeto .position-absolute {
+        width: 100%; /* Aumenta a largura da descrição em telas menores */
+        padding: 15px;
+    }
+}
