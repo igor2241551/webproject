@@ -3,14 +3,20 @@ body{
 } 
 
 h1{
-    font-size: 70px;
+    /* font-size: 70px; */
+    font-size: 4.375rem;
     font-weight: bold;
 }
 
 #navbarNav{
     color: #1558B7; 
     background: #fff; 
+
     
+}
+.listaMenu{
+    display: flex;
+    align-items: center;
 }
 #navbarNav :hover{
     color: #1558B7;
@@ -40,16 +46,32 @@ h1{
     color: #ffffff;
 }
 
+@media (min-width: 768px) {
+    .carousel-item {
+      height: 500px; /* Define a altura desejada para slides em tamanhos médios e maiores */
+    }
+    .imagem-slide img {
+      margin-top: 50px; /* Margem superior de 50px */
+      margin-bottom: 50px; /* Margem inferior de 50px */
+    }
+  }
+
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
-.carousel-inner { 
-    height: 80vh; 
-    max-height: 80vh;
+
+
+.carousel-control-prev{
+    width: 5%;
+}
+
+.carousel-control-next{
+    width: 5%;
+    
 }
 
 
 
-#carrocel1 {
+#carrocel2 {
     background: #000;
 }
 
@@ -59,45 +81,54 @@ h1{
     object-fit: contain; /* Contém a imagem dentro da div */ 
 }
 
-
-#carrocel1 img{
+#carrocel2 img{
     max-width: 100%;
     height: auto;
     max-height: 100%;  
 } 
+/* rever os dois acima a ver se não estaõ a fazer o mesmo */
 
-#carrocel2 {
+#carrocel1 {
     background: #EDEDED;
 }
 
-#btnslide1{
+#btnslide2{
     border-radius: 0%;
     border: 2px solid #fff;
     background: #000;
 }
 
-#btnslide1:hover{
+/* #btnslide2:hover{
     border-radius: 0%;
     border: 2px solid #fff;
     color: #000;
     background: #fff;
-}
+} */
 
-#btnslide2{
+#btnslide1{
     border-radius: 0%;
     border: 2px solid #1558B7;
     background: #EDEDED;
     color: #1558B7;
 }
 
-#btnslide2:hover{
+#btnslide1:hover, #btnslide2:hover {
     border-radius: 0%;
     border: 2px solid #1558B7;
     background: #1558B7;
     color: #fff;
 }
 
+
+
 /* *********************************************final do slide********************************* */
+
+
+
+
+
+
+
 
 /* ******************************************************cards********************************** */
 
@@ -105,6 +136,23 @@ h1{
     border-color: #1558B7;
 }
 
+.cardPaises a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.cardPaises a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.cardPaises img{    /* isto não esta bem a imagem fica com tamanhos descontrolados*/
+    width: auto;
+    height: 200px;
+    object-fit: contain; 
+    object-position: center;
+
+}
 /* ********************************************final dos cards*********************************** */
 
 
@@ -121,22 +169,64 @@ footer nav li{
     height: auto;
 }   
 
+.listaRS{
+    list-style-type: none; 
+    padding: 10px; 
+    /* margin: 10px;  */
+    display: flex; 
+
+}
+
+#btnexplora{
+    color: #000;
+    background: #fff;
+    border-radius: 0%;
+    border: 1px solid #fff;
+}
+
+#btnexplora:hover{
+    color: #fff;
+    background-color: transparent;
+    border-radius: 0%;
+    border: 1px solid #fff;
+}
+
 
 /* *************************************************** secção EXPLORA MUNDO **************************** */
 #explorarmundo{
-    background-image: url('../img/cidadenoite.jpg');
+    background-image: url('../img/cidade2.jpg');
     background-size: cover;
     background-position: center;
     display: flex; 
     align-items: center;
     justify-content: center;
-    height: 600px;
+    /* height: 600px; */
     display: flex; align-items: center; 
 }
 
 
 
+/* *******************************************secção contactos da homepage************************************ */
 
+.cardContactos{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+
+.cardContactos:hover{
+    box-shadow:  0px 4px 34px 0px rgba(0,0,0,0.15);
+    border: 0px solid #000;
+    
+}
+
+.cardContactos:hover .btContactos{
+    background: #1558B7;
+    color: #ffffff;
+    
+}
+
+
+/* ******************************************************************************************************** */
 
 /* *************************************************** Contactos  **************************** */
 #TextoAboutContacto {
@@ -182,6 +272,7 @@ footer nav li{
 
 /* *************************************************** Sobre **************************** */
 #textoHeader {
+    word-wrap: break-word;
     text-align: center;
 }
 
@@ -202,55 +293,35 @@ footer nav li{
     font-size: 55px;
 }
 
+#texto {
+    font-size: 30px;
+    background-color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 5px;
+}
+
 #imagemProjeto img {
     background-color: #000;
     opacity: 0.80;
-    width: 100vw;
+    width: 100vw; /* Full width of the viewport */
 }
 
 .full-page-image {
     max-height: calc(100vh - 50px);
     min-height: calc(100vh - 150px);
-    object-fit: cover; /* Cobre o objeto todo */
+    object-fit: cover; /* Ensures the image covers the entire area without distortion */
 }
 
 #historiaProjeto .position-absolute {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px; /* Arredonda os cantos da caixa */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 10px; /* Rounded corners */
 }
 
 
 /* *************************************************** Sobre **************************** */
-
-
-/* *************************************************** DETALHES PAÍS **************************** */
-
-#bandeira{
-    max-width: 320px;
-    max-height: 320px;
-    background-color: rgba(17, 5, 5, 0.2);
-    padding: 10px;
-    border-radius: 8px;
-    display: block;
-    max-width: 100%; /*Responsividade*/
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Sombra suave para destacar */
-}
-
-.form-label {
-   font-size: 0.8rem;
-}
-
-#header_paises {
-    max-width: 600px; /* Largura máxima para o container */
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* *************************************************** DETALHES PAÍS **************************** */

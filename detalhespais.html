@@ -31,19 +31,19 @@
             <div class="collapse navbar-collapse">
                 <ul id="navbarNav" class="navbar-nav position-absolute end-0 fw-bold">
                 <li class="nav-item px-4">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link" href="paises.html">Países</a>
+                    <a class="nav-link" href="#">Países</a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link" href="#">Loja</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link" href="sobre.html">Sobre</a>
+                    <a class="nav-link" href="#">Sobre</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a id="btcontactos" class="nav-link px-3" href="contactos.html">Contactos</a>
+                    <a id="btcontactos" class="nav-link px-3" href="#">Contactos</a>
                 </li>
                 </ul>
             </div>
@@ -51,61 +51,45 @@
         </nav>
 <!--************************* FINAL NAVBAR      ************************* -->
 
- <!--************************* HEADER - IMAGEM BANDEIRA COM NOME DO PAÍS *************************-->
- <div class="container my-5">
-    <div id="header_paises" class="d-flex justify-content-center align-items-center flex-column">
-        <img id="bandeira" src="" alt="Bandeira do País">
-        <h1 class="fst-italic country-name mt-2" id="nome">Nome do País</h1>
-    </div>
-</div>
-<hr>
-<!--************************* FIM HEADER *************************-->
-
-<!--************************* FORMULÁRIO COM DETALHES DO PAÍS *************************-->
-<div class="container d-flex justify-content-center">
-    <div class="col-md-8 d-flex">
-        <div class="row w-100">
-            <div class="col-md-6">
-                <form id="detalhes-pais-form">
-                    <div class="mb-3">
-                        <label for="capital" class="form-label">Capital</label>
-                        <input type="text" id="capital" class="form-control" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label for="moeda" class="form-label">Moeda</label>
-                        <input type="text" id="moeda" class="form-control" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label for="continente" class="form-label">Continente</label>
-                        <input type="text" id="continente" class="form-control" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label for="populacao" class="form-label">População</label>
-                        <input type="text" id="populacao" class="form-control" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label for="linguas" class="form-label">Línguas</label>
-                        <input type="text" id="linguas" class="form-control" readonly>
-                    </div>
-                </form>
-            </div>
-
-            <div class="col-md-6">
-                <div class="bg-light p-4 rounded">
-                    <h5 class="mb-3">Informações Adicionais</h5>
-                    <ul class="list">
-                        <li id="area"><strong>Área:</strong> N/A</li>
-                        <li id="subregiao"><strong>Sub-região:</strong> N/A</li>
-                        <li id="uniaoeuropeia"><strong>Membro da ONU:</strong> N/A</li>
-                        <li id="populacao-urbana"><strong>População:</strong> N/A</li>
-                    </ul>
-                </div>
-            </div>
+<!--************************* HEADER - IMAGEM BANDEIRA PAÍS *************************-->
+<div class="container d-flex">
+    <div id="#" class="mb-3 mt-4">
+        <div>
+            <img id="bandeira" src="" alt="Bandeira do País" class="img-fluid" style="max-width: 200px;">
         </div>
+
+        <div class="container mt-4">
+            <form id="detalhes-pais-form">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome do País</label>
+                    <input type="text" id="nome" class="form-control" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="capital" class="form-label">Capital</label>
+                    <input type="text" id="capital" class="form-control" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="moeda" class="form-label">Moeda</label>
+                    <input type="text" id="moeda" class="form-control" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="continente" class="form-label">Continente</label>
+                    <input type="text" id="continente" class="form-control" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="populacao" class="form-label">População</label>
+                    <input type="text" id="populacao" class="form-control" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="linguas" class="form-label">Línguas</label>
+                    <input type="text" id="linguas" class="form-control" readonly>
+                </div>
+            </form>
+        </div>
+
     </div>
 </div>
-<!--************************* FIM DO FORMULÁRIO *************************-->
-
+<!--************************* FIM HEADER                    *************************-->
 
 <!--*************************      FOOTER  *************************-->
         <footer>
@@ -121,19 +105,19 @@
                 <div class="collapse navbar-collapse justify-content-center" >
                     <ul id="navbarNav" class="navbar-nav fw-bold">
                     <li class="nav-item px-4">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="paises.html">Países</a>
+                        <a class="nav-link" href="#">Países</a>
                     </li>
                     <li class="nav-item px-3">
                         <a class="nav-link" href="#">Loja</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link active" href="sobre.html">Sobre</a>
+                        <a class="nav-link active" aria-current="page" href="#">Sobre</a> <!-- Definição da página atual -->
                     </li>
                     <li class="nav-item px-3" >
-                        <a class="nav-link px-3" href="contactos.html">Contactos</a>
+                        <a class="nav-link px-3" href="#">Contactos</a>
                     </li>
                     </ul>
                 </div>

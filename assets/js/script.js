@@ -1,36 +1,58 @@
+var cloneCard = $('.cardPais').clone();
+
 $(document).ready(function() {
+    $('#listaPaises').html('');
     $.ajax({
         method: "GET",
-        url: "https://restcountries.com/v3.1/all",
-        // type: "GET",
-        success: function(data) {
-            data.sort(() => 0.5 - Math.random());
-            $("#countryCards").html('');
-            for (let i = 0; i < 3; i++) {
-                let country = data[i];
-                let countryCard = `
-                    <div class="col-md-4 ">
-                    <div class="card rounded-0 border-2">
-                    <div class="imagemCard">
-                        <img
-                            src="${country.flags.svg}"
-                            class=" card-img-top p-4 object-fit-scale"
-                            alt="Bandeira de ${country.name.common}"
-                        />
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title text-center">${country.name.common}</h5>
-                    </div>
-                    </div>
+        url: "https://restcountries.com/v3.1/all"
+    }).done(function(dados){
+            console.log(dados);
+            for(var i=0; i<3; i++){
+                // var indiceAleatorio = Math.floor(Math.random() * (dados.length + 1));
+                var indiceAleatorio = Math.floor(Math.random() * (dados.length));
+                console.log(dados[indiceAleatorio].name.common);                                                 //futuramente apagar
+                
+                var cardCopia = `
+                    <div class="col-md-4 cardPaises mt-3">
+                        <a href="detalhespais.html?id=${dados[indiceAleatorio].cca2}" class="linkCard">
+                            <div class="card rounded-0 border-2">
+                                <div class="d-flex flex-column justify-content-center h-100">
+                                    <img
+                                    src=${dados[indiceAleatorio].flags.svg}
+                                    class="card-img-top p-4 imagemCard"
+                                    alt=${dados[indiceAleatorio].name.common}/>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title text-center tituloCard">${dados[indiceAleatorio].name.common}</h5>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 `;
-                $("#countryCards").append(countryCard);
+
+                // var cardCopia = cloneCard.clone();
+                // $('.linkCard', cardCopia).attr('href', 'detalhespais.html?id='+dados[indiceAleatorio].cca2);  //alterar para a variavel correta
+                // console.log(dados[indiceAleatorio].cca2);
+                // $('.imagemCard', cardCopia).attr("src", dados[indiceAleatorio].flags.svg); 
+                // $('.imagemCard', cardCopia).attr("alt", "Bandeira de "+dados[indiceAleatorio].name.common); 
+                // console.log(dados[indiceAleatorio].flags.svg);
+                // $('.tituloCard', cardCopia).html(dados[indiceAleatorio].name.common);
+                // console.log(dados[indiceAleatorio].name.common);
+           
+                $('#listaPaises').append(cardCopia);
+
             }
-        },
-        error: function(error) {
-            console.log("Erro:", error);
-        }
+            console.log(dados.length);
+
+        });
     });
+    
+    
+    
+    
+
+
+
 
     document.getElementById("btin").addEventListener("mouseover", function() { 
         this.src = "assets/img/inhover.png"; 
@@ -59,7 +81,7 @@ $(document).ready(function() {
     document.getElementById("btx").addEventListener("mouseout", function() { 
         this.src = "assets/img/x.png";  
     });
-});
+// });
 
 
 
@@ -99,3 +121,4 @@ $(document).ready(function() {
 //         }
 //     });
 // });
+
