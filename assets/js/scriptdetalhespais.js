@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     function LerURL(param) { // Função para obter parâmetros da URL
+        // Exemplo: https://site.com/pagina.html?id=PT
         const parametro = new URLSearchParams(window.location.search);
         return parametro.get(param);
     }
