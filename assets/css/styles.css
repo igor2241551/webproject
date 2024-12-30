@@ -402,7 +402,7 @@ ul.listagensInfos li {
 
 
 
-/* *************************************************** Lista de Paises **************************** */
+/* *************************************************** Lista de Paises e Favoritos**************************** */
 #CardPais {
     aspect-ratio: 4 / 3; 
     margin-bottom: 20px;
@@ -466,4 +466,19 @@ ul.listagensInfos li {
 .tituloPaginaPaises{
     background: #EDEDED;
 }
-/* *************************************************** Lista de Paises **************************** */
+
+#tituloFavoritos{
+    background-image: url('../img/terra.png');
+    background-size: cover;
+    background-position: bottom;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    /* height: 600px; */
+    display: flex; align-items: center; 
+    color: #EDEDED;
+}
+
+
+/* *************************************************** Lista de Paises e Favoritos**************************** */
+
