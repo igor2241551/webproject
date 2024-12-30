@@ -296,6 +296,11 @@ footer nav li{
     font-size: 55px;
 }
 
+#texto p {
+    font-weight: bold;
+    color: white;
+}
+
 #imagemProjeto img {
     background-color: #000;
     opacity: 0.80;
