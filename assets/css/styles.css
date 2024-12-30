@@ -146,7 +146,7 @@ h1{
     color: inherit;
 }
 
-.cardPaises img{    /* isto não esta bem a imagem fica com tamanhos descontrolados*/
+.cardPaises img{    
     width: auto;
     height: 200px;
     object-fit: contain; 
@@ -402,9 +402,59 @@ ul.listagensInfos li {
 .pagination-flat .page-link {
     border-radius: 0 !important; /* Remove o arredondamento */
     border: 1px solid #1558B7;
-  }
+}
 
 .half-screen {
     height: 50vh; /* Define a altura como metade da viewport */
-  }
+}
+
+
+.cardPais-Conteudo{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+
+.cardPais-Conteudo:hover{
+    box-shadow:  0px 4px 34px 0px rgba(0,0,0,0.15);
+    border: 0px solid #000;
+    scale: 1.03;
+}
+
+
+
+.cardPais-Conteudo img{
+    width: auto;
+    height: 200px;
+    object-fit: contain; 
+    object-position: center;
+}
+.btnVerDetalhes{
+    color: #1558B7;
+    background: #fff;
+    border: 2px solid #1558B7;
+    border-radius: 0%;
+}
+
+.btnVerDetalhes:hover { 
+    background: #1558B7;
+    color: #ffffff;
+}
+
+.btnFavorito{
+    font-size: xx-large;
+}
+
+.labelCard{
+    color: #1558B7;
+    font-size: small;
+    margin: 0;
+}
+
+.infoCard{
+    font-weight: bold;
+}
+
+.tituloPaginaPaises{
+    background: #EDEDED;
+}
 /* *************************************************** Lista de Paises **************************** */

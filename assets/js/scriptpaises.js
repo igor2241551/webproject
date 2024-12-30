@@ -2,11 +2,16 @@ function redirectToDetailsPage(pais) {
   window.location.href = `detalhespais.html?id=${pais}`;
 }
 
+var cloneOriginalCard = $('.cardPaisPaises').clone();
+
 $(document).ready(function () {
+  $('#countries-container').html('');
   $.ajax({
     url: "https://restcountries.com/v3.1/all",
     type: "GET",
     success: function (data) {
+      
+
       let paises = data.sort((a, b) =>
         a.name.common.localeCompare(b.name.common)
       );
@@ -42,7 +47,7 @@ $(document).ready(function () {
   function renderizarPaises(paises, pagina, itemsPorPagina) {
     const countriesContainer = $("#countries-container");
     countriesContainer.empty();
-
+    var favoritos = JSON.parse(localStorage.getItem("paisesFavoritos")) || [];
     const inicio = (pagina - 1) * itemsPorPagina;
     const fim = inicio + itemsPorPagina;
     const paisesPagina = paises.slice(inicio, fim);
@@ -57,27 +62,39 @@ $(document).ready(function () {
         `);
     } else {
       paisesPagina.forEach((pais) => {
+
         console.log(pais.cca2);
         let id = pais.cca2;
-        const paisDiv = $(`
-          <div class="col-md-3 mb-3">
-            <div class="card">
-              <img
-                src="${pais.flags.png}"
-                class="card-img-top"
-                alt="Bandeira de ${pais.name.common}"
-                style="aspect-ratio: 4 / 3; object-fit: cover;"
-              />
-              <div class="card-body">
-                <h5 class="card-title">${pais.name.common}</h5>
-                <button type="button" id="btnslide1" class="btn btn-primary btn-md px-5" onclick="redirectToDetailsPage('${id}')">Explorar</button>
+        var objetoPais = {
+          "name": pais.name.common,
+          "cca2": pais.cca2,
+          "capital": pais.capital,
+          "area": pais.area,
+          "populacao": pais.population,
+          "continente": pais.continents,
+          "flag": pais.flags.svg
+        };
+        var stringObjetoPais = JSON.stringify(objetoPais);
+                                      
+        var cloneCard = cloneOriginalCard.clone();
+        $('.tituloCard', cloneCard).html(pais.name.common);
+        $('.capital', cloneCard).html(pais.capital);
+        $('.imagemCard', cloneCard).attr("src", pais.flags.svg);
+        $('.area', cloneCard).html(pais.area);
+        $('.continente', cloneCard).html(pais.continents);
+        $('.populacao', cloneCard).html(pais.population);
+      
+        var estaNosFavoritos = favoritos.some(favorito => favorito.cca2 === pais.cca2); 
+        if (estaNosFavoritos) { 
+            $('.btnFavorito', cloneCard).css("color", "red"); 
+        }
+      
+        $('.btnFavorito', cloneCard).attr("onclick", "addFavorito("+stringObjetoPais+")");
+        $('.btnVerDetalhes', cloneCard).attr("onclick", "verDetalhes('" + pais.cca2 + "')");
 
-              </div>
-            </div>
-          </div>
-        `);
-        countriesContainer.append(paisDiv);
+        $('#countries-container').append(cloneCard);
       });
+    
     }
   }
 
@@ -148,3 +165,41 @@ $(document).ready(function () {
     paginationContainer.append(ul);
   }
 });
+
+
+function addFavorito(pais){
+    
+  var arrayFavoritos;
+  var encontrado=false;
+  console.log("Estas nos Favoritos");
+  console.log(pais);
+  if(localStorage.getItem("paisesFavoritos") === null){
+      arrayFavoritos = [];
+  } else {
+      console.log("Resultado da variavel"+pais.cca2);
+      arrayFavoritos = JSON.parse(localStorage.getItem("paisesFavoritos"));
+
+      for(var i=0; i<arrayFavoritos.length; i++){
+          
+          if(arrayFavoritos[i].cca2===pais.cca2){
+              encontrado= true;
+              arrayFavoritos.splice(i,1);
+              $(`.btnFavorito[onclick*="${pais.cca2}"]`).css("color", "black");
+              break;
+          }
+      }
+      console.log(arrayFavoritos);
+  }
+  if(encontrado === false){
+      arrayFavoritos.push(pais);
+      $(`.btnFavorito[onclick*="${pais.cca2}"]`).css("color", "red");
+  }
+  var favoritosStorage = JSON.stringify(arrayFavoritos)
+  localStorage.setItem("paisesFavoritos", favoritosStorage);
+
+}
+
+
+function verDetalhes(cca2) { 
+  window.location.href = 'detalhespais.html?id=' + cca2; 
+}
