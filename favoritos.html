@@ -15,12 +15,10 @@
   <body>
     <!--                                                               nav bar -->
     <nav class="navbar navbar-expand-lg bg-white">
-      <div class="container position-relative">
-        <div class= "#">
-          <a href="#">
-            <img src="assets/img/logo.png" alt="Instituto Politecnico de Leiria"/>
-          </a>
-        </div>
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="assets/img/logo.png" alt="Instituto Politecnico de Leiria" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -28,26 +26,29 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation">
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse">
-          <ul id="navbarNav" class="navbar-nav position-absolute end-0 fw-bold">
-            <li class="nav-item px-4">
-              <a class="nav-link" href="index.html">Home</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto fw-bold">
+            <li class="nav-item px-3">
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item px-3">
               <a class="nav-link" href="paises.html">Países</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link" href="#">Loja</a>
+              <a class="nav-link active" href="favoritos.html">Favoritos</a>
             </li>
             <li class="nav-item px-3">
-              <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a> <!--Sobre ativo na navbar-->
+              <a class="nav-link disabled" href="#">Loja</a>
             </li>
             <li class="nav-item px-3">
-              <a id="btcontactos" class="nav-link px-3" href="contactos.html">Contactos</a>
+              <a class="nav-link" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item px-3">
+              <a id="btcontactos" class="nav-link" href="contactos.html">Contactos</a>
             </li>
           </ul>
         </div>
@@ -66,7 +67,7 @@
         <div class="text-center mt-3 ">
             <p>Os países selecionados ficaram guardados em memória para consulta futura</p>
         </div>
-    <section class="p-3">
+    <section class="p-2">
         <div class="container mt-1">
         <!-- <h1 class="text-center tituloPaginaFavoritos">Países favoritos</h1> -->
         <!-- Spacer -->

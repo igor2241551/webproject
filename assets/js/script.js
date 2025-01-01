@@ -1,6 +1,9 @@
 var cloneCard = $('.cardPais').clone();
 
 $(document).ready(function() {
+    $('#btnslide1').attr("onclick", "verDetalhesJapao()");
+    $('#btnslide2').attr("onclick", "verDetalhesAustralia()");
+
     $('#listaPaises').html('');
     $.ajax({
         method: "GET",
@@ -48,11 +51,6 @@ $(document).ready(function() {
     });
     
     
-    
-    
-
-
-
 
     document.getElementById("btin").addEventListener("mouseover", function() { 
         this.src = "assets/img/inhover.png"; 
@@ -81,6 +79,19 @@ $(document).ready(function() {
     document.getElementById("btx").addEventListener("mouseout", function() { 
         this.src = "assets/img/x.png";  
     });
+
+
+    function verDetalhesJapao(){ 
+        window.location.href = 'detalhespais.html?id=JP'; 
+    }
+    function verDetalhesAustralia(){ 
+        window.location.href = 'detalhespais.html?id=AU'; 
+    }
+
+
+
+
+
 // });
 
 

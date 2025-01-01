@@ -479,6 +479,17 @@ ul.listagensInfos li {
     color: #EDEDED;
 }
 
+#tituloPaises{
+    background-image: url('../img/terra.png');
+    background-size: cover;
+    background-position: bottom;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    /* height: 600px; */
+    display: flex; align-items: center; 
+    color: #EDEDED;
+}
 
 /* *************************************************** Lista de Paises e Favoritos**************************** */
 
