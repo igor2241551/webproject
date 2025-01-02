@@ -58,15 +58,15 @@
     
     <!--                                                                 final nav bar -->
     <section class="d-flex flex-column flex-md-row justify-content-between gap-5 p-4 m-4">
-        <div class="d-flex flex-column justify-content-end p-5 text-white"
+        <div class="d-flex flex-column justify-content-end p-5 "
         id="TextoAboutContacto">
-          <div>
+          <div class="">
             <div>
-              <h1 id="TextoAboutContactoHeading">Contactos</h1>
+              <h1 id="TextoAboutContactoHeading" class="text-white ">Contactos</h1>
             </div>
             <div>
               <p>
-                <span class="fw-bold">
+                <span class="fw-bold text-white">
                   Utilize este formulário para entrar em contacto connosco. Seja para nos deixar uma sugestão, crítica ou reclamação, a nossa linha de
                   contactos estará sempre disponível.
                 </span>
@@ -158,26 +158,30 @@
 
       <div class="py-3">
         <!-- menu do footer -->
-        <nav class="navbar navbar-expand-lg d-flex">
+        <div class="d-block d-md-none text-center">
+          <a href="#">Ir para o topo da página</a>
+        </div>
+        <nav class="d-none d-md-block navbar navbar-expand-md d-flex">
           <div class="container-fluid">
-            <div class="collapse navbar-collapse justify-content-center">
+            <div class="collapse navbar-collapse justify-content-center" >
               <ul id="navbarNav" class="navbar-nav fw-bold">
                 <li class="nav-item px-4">
-                  <a class="nav-link" href="#"
-                    >Home</a
-                  >
+                  <a class="nav-link " aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="index.html">Países</a>
+                  <a class="nav-link" href="paises.html">Países</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="#">Loja</a>
+                  <a class="nav-link " href="favoritos.html">Favoritos</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="sobre.html">Sobre</a>
+                  <a class="nav-link disabled" href="#">Loja</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link px-3 active" aria-current="page" href="contactos.html">Contactos</a>
+                  <a class="nav-link " href="sobre.html">Sobre</a>
+                </li>
+                <li class="nav-item px-3" >
+                  <a class="nav-link active px-3" href="contactos.html">Contactos</a>
                 </li>
               </ul>
             </div>
@@ -186,7 +190,20 @@
       </div>
 
       <div>
-        <!-- link das redes sociais -->
+        <ul class="container-fluid listaRS align-items-center justify-content-center">
+          <li class="px-3">
+            <a href="https://www.linkedin.com" target="_blank"><img id="btin" src="assets/img/in.png" alt="https://www.linkedin.com"></a>
+          </li>
+          <li class="px-3">
+            <a href="https://www.facebook.com" target="_blank"><img id="btfb" src="assets/img/fb.png" alt="https://www.facebook.com"></a>
+          </li>
+          <li class="px-3">
+            <a href="https://www.instagram.com/" target="_blank"><img id="btinst" src="assets/img/inst.png" alt="https://www.instagram.com/"></a>
+          </li>
+          <li class="px-3">
+            <a href="https://x.com/" target="_blank"><img id="btx" src="assets/img/x.png" alt="https://x.com/"></a>
+          </li>
+        </ul>
       </div>
 
       <div class="text-center border-top border-2 py-3">
