@@ -240,7 +240,12 @@ footer nav li{
     max-width: 40%;
 }
 
-.TextoAboutContactoConteudo {
+#TextoAboutContactoHeading {
+    position: relative; /* Permite deslocar o elemento */
+    top: -400px; /* Move o título para cima */
+}
+
+.TextoAboutContactoConteudo #CorpoDoTexto{
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px; 
     padding: 10px;
@@ -430,8 +435,6 @@ ul.listagensInfos li {
     border: 0px solid #000;
     scale: 1.03;
 }
-
-
 
 .cardPais-Conteudo img{
     width: auto;
