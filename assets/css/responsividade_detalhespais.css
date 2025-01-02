@@ -6,6 +6,11 @@
     .mb-4 {
         margin-bottom: 1.5rem; /* Aumenta o espaçamento entre as seções */
     }
+
+    #botaoMapa {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 576px) {

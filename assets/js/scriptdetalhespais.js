@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("populacao-urbana").innerHTML = `<strong>População:</strong> ${pais.population ? pais.population.toLocaleString() : "N/A"}`;
 
         // Atualiza o link para o Google Maps
-        const mapaLink = pais.maps ? pais.maps.googleMaps : "#"; // O link existe, se sim, ir buscar. Se não, #
+        const mapaLink = pais.maps ? pais.maps.googleMaps : "#"; // O link existe?, se sim, ir buscar. Se não, #
         const botaoMapa = document.getElementById("linkMapa"); // Seleciona o link dentro do botão
         botaoMapa.href = mapaLink; // Atualiza o href do link
 
