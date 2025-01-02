@@ -206,7 +206,7 @@
             <br>escondidos à espera de serem revelados. Começa a tua aventura hoje e cria memórias que durarão para toda a vida.
           </span>
           <div class="mt-5 mb-5 text-center">
-            <button type="button" id="btnexplora" class="btn btn-primary btn-md px-5">Explorar</button>
+            <button type="button" id="btnexplora" class="btn btn-primary btn-md px-5" onclick="window.location.href='paises.html'">Explorar</button>
           </div>
         </div>
       </section>
@@ -286,7 +286,10 @@
 
       <div class="py-3">
         <!-- menu do footer -->
-        <nav class="navbar navbar-expand-lg d-flex">
+        <div class="d-block d-md-none text-center">
+          <a href="#">Ir para o topo da página</a>
+        </div>
+        <nav class="d-none d-md-block navbar navbar-expand-md d-flex">
           <div class="container-fluid">
             <div class="collapse navbar-collapse justify-content-center" >
               <ul id="navbarNav" class="navbar-nav fw-bold">
@@ -297,7 +300,10 @@
                   <a class="nav-link" href="paises.html">Países</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="#">Loja</a>
+                  <a class="nav-link " href="favoritos.html">Favoritos</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link disabled" href="#">Loja</a>
                 </li>
                 <li class="nav-item px-3">
                   <a class="nav-link" href="sobre.html">Sobre</a>
