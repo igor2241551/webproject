@@ -241,8 +241,8 @@ footer nav li{
 }
 
 #TextoAboutContactoHeading {
-    position: relative; /* Permite deslocar o elemento */
-    top: -400px; /* Move o título para cima */
+    position: relative; 
+    top: -400px
 }
 
 .TextoAboutContactoConteudo #CorpoDoTexto{
@@ -269,6 +269,13 @@ footer nav li{
 
     #contactoDivider {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #TextoAboutContactoHeading {
+        font-size: 40px;
+        top:auto;
     }
 }
 /* *************************************************** Contactos  **************************** */
