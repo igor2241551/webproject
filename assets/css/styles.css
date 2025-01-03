@@ -255,6 +255,14 @@ footer nav li{
     height: 50vh;
 }
 
+
+#btnEnviar{
+    border-radius: 0%;
+}
+#btnEnviar:hover{
+    background: #1558B7;
+}
+
 /* Mobile media querye */
 @media (max-width: 1092px) {
     #TextoAboutContacto {
@@ -411,6 +419,15 @@ ul.listagensInfos li {
     background-color: #f4f6f9; 
     font-family: 'Arial', sans-serif;
 }
+
+#linkMapa{
+    border-radius: 0%;
+}
+#linkMapa:hover{
+    background: #1558B7;
+}
+
+
 
 /* *************************************************** DETALHES PAÍSES **************************** */
 
