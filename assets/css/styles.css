@@ -3,7 +3,6 @@ body{
 } 
 
 h1{
-    /* font-size: 70px; */
     font-size: 4.375rem;
     font-weight: bold;
 }
@@ -86,7 +85,6 @@ h1{
     height: auto;
     max-height: 100%;  
 } 
-/* rever os dois acima a ver se não estaõ a fazer o mesmo */
 
 #carrocel1 {
     background: #EDEDED;
@@ -97,13 +95,6 @@ h1{
     border: 2px solid #fff;
     background: #000;
 }
-
-/* #btnslide2:hover{
-    border-radius: 0%;
-    border: 2px solid #fff;
-    color: #000;
-    background: #fff;
-} */
 
 #btnslide1{
     border-radius: 0%;
@@ -172,7 +163,6 @@ footer nav li{
 .listaRS{
     list-style-type: none; 
     padding: 10px; 
-    /* margin: 10px;  */
     display: flex; 
 
 }
@@ -200,7 +190,6 @@ footer nav li{
     display: flex; 
     align-items: center;
     justify-content: center;
-    /* height: 600px; */
     display: flex; align-items: center; 
 }
 
@@ -266,7 +255,6 @@ footer nav li{
 /* Mobile media querye */
 @media (max-width: 1092px) {
     #TextoAboutContacto {
-        /* background-image: none; */
         font-size: small;
         max-width: 100%;
     }
@@ -503,7 +491,6 @@ ul.listagensInfos li {
     display: flex; 
     align-items: center;
     justify-content: center;
-    /* height: 600px; */
     display: flex; align-items: center; 
     color: #EDEDED;
 }
@@ -515,7 +502,6 @@ ul.listagensInfos li {
     display: flex; 
     align-items: center;
     justify-content: center;
-    /* height: 600px; */
     display: flex; align-items: center; 
     color: #EDEDED;
 }

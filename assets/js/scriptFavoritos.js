@@ -1,14 +1,8 @@
-// function redirectToDetailsPage(pais) {
-//     window.location.href = `detalhespais.html?id=${pais}`;
-// }
-  
 var cloneOriginalCard = $('.cardPaisPaises').clone();
   
 $(document).ready(function () {
 
     $('#countries-container-Favoritos').html('');
-    // const countriesContainer = $("#countries-container");
-    // countriesContainer.empty();
     arrayFavoritos = JSON.parse(localStorage.getItem("paisesFavoritos")) || [];
     
     if (arrayFavoritos.length === 0) {

@@ -15,9 +15,9 @@
 
 @media (max-width: 576px) {
     .form-control {
-        font-size: 0.9rem; /* Ajusta a fonte */
+        font-size: 0.9rem; 
     }
     .bg-light {
-        padding: 1.5rem; /* Ajusta o padding */
+        padding: 1.5rem; 
     }
 }

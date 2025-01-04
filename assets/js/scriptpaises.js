@@ -52,8 +52,6 @@ $(document).ready(function () {
     const fim = inicio + itemsPorPagina;
     const paisesPagina = paises.slice(inicio, fim);
 
-    // <button type="button" id="btnslide1" class="btn btn-primary btn-md px-5" onclick="redirectToDetailsPage(${id})">Explorar</button>
-
     if (paisesPagina.length === 0) {
       countriesContainer.append(`
             <div class="col-12 container d-flex justify-content-center align-items-center half-screen">
